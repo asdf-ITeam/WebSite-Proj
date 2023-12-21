@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face{
+    font-family: "Shabnam-FD";
+    src: url(../fonts/Shabnam-FD.woff2) format("woff2");
+}
+body{
+    background-color: #F5F0DF ;
+    font-family: Shabnam-FD;
+}
+
+.container{
+    margin: auto;
+    margin-top: 5%;
+}
+.backimg{
+
+    display: flex;
+    justify-content: center;
+    min-width: 320px;
+    width: 100%;
+    /* max-width: 370px; */
+}
+.backimg img{
+    min-width: 320px;
+    max-width: 370px;
+    width: 24%;
+}
+.login-form{
+    box-sizing: border-box;
+    background-color: #F46432;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 24%;
+    /* height: 25em; */
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 370px;
+    border-radius: 0 0 15% 15%;
+    /* padding-bottom: 100px; */
+    padding-right: 35px;
+    padding-left: 35px;
+    
+    
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    min-width: 260px;
+    gap: 1em;
+}
+.title{
+    margin-bottom: .5em;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+.input1 label, .input2 label{
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 1.1rem;
+}
+.input1 ,.input2, .link-signup{
+    margin-bottom: 20px;
+}
+.submit button{
+    width: 90%;
+    border: none;
+    padding-bottom:5px;
+    padding-top: 5px;
+    color: #fff;
+    background: #7B1111;
+    border-radius: 18px;
+    display: block;
+}
+.link-signup{
+    color: #fff;
+}
+.link-signup a{
+    text-decoration: none;
+    color: #7B1111;
+    font-size: 1rem;
+}
+.link-signup .section1{
+    font-size: .8rem;
+}
