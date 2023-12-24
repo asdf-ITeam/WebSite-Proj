@@ -28,7 +28,9 @@
                     <div class="input2">
                         <label for="password">رمز عبور</label>
                         <input id="password" name="password" type="password"
-                        required minlength="6" 
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!,@,$,%]).{6,}$"
+                        required 
+                        minlength="6" 
                         placeholder="رمز عبور"                        
                         >
                     </div>
@@ -42,6 +44,7 @@
                 
             </form>
         </div>
+        <!-- <div class="vector"><img src="../content/Vector 5vector.svg" alt=""></div> -->
     </div>
 </body>
 </html>
