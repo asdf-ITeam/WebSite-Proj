@@ -348,3 +348,32 @@ body{
     text-decoration: underline;
     color: #ddd;
 }
+.articles
+{
+    display: block;
+    margin-right: 10rem;
+    margin-top: 1rem;
+    margin-left: 10rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffccb2;
+    padding: 10px 119px;
+    padding-bottom: 15px;
+    border-radius: 30px;
+    padding-left: 50px;
+    
+}
+.title:visited {color:#000;}
+.title:hover {color:#324ab2;}
+.title{
+    /* word-spacing: 1rem; */
+    text-align: justify;
+    text-decoration: none;
+    justify-content: center;
+    font-weight:bold;   
+    font-size: 2rem;
+}
+.context{
+    max-width: 60vw;
+}
