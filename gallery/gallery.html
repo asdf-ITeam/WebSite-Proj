@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="../content/ehsanelderly_LOGO-transparent.ico" type="image/x-icon">
+    <title>گالری عکس</title>
+</head>
+<body>
+  <header>
+    <div class="main_header">
+        <nav class="navbar">
+            <div class="header">
+                <ul>
+                    <li class="logo_image"><a href="../index.html" id="logo-header"><img src="../content/ehsanelderly_LOGO-transparent.png" alt="logo"></a></li>
+                    <li class="home_nav"><a href="../index.html">خانه</a></li>
+                    <li class="gallery_nav"><a href="gallery.html">گالری عکس</a></li>
+                    <li class="article_nav"><a href="../article.html">مقالات</a></li>
+                    <li class="about_nav"><a href="#">درباره ما</a></li>
+                    <li class="contact_nav"><a href="#">تماس با ما</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="login_signup">
+            <div class="loginbtn"><a href="../login/login.html">ورود</a></div>
+            <div class="signupbtn"><a href="../SignUp/signup.html">ثبت نام</a></div>
+        </div>
+    </div>
+</header>
+    <div class="gallery">
+        <div class="gallery-item">
+          <img src="./content/kyle-johnson-E3zv-4Rdz-Q-unsplash.jpg" alt="Image 1" onclick="openModal('./content/kyle-johnson-E3zv-4Rdz-Q-unsplash.jpg')">
+        </div>
+        <div class="gallery-item">
+          <img src="./content/leif-christoph-gottwald-KhTIw-dLWY4-unsplash.jpg" alt="Image 2" onclick="openModal('./content/leif-christoph-gottwald-KhTIw-dLWY4-unsplash.jpg')">
+        </div>
+        <div class="gallery-item">
+          <img src="./content/marek-piwnicki-WXx-J0J4Lzo-unsplash.jpg" alt="Image 3" onclick="openModal('./content/marek-piwnicki-WXx-J0J4Lzo-unsplash.jpg')">
+        </div>
+        <div class="gallery-item">
+            <img src="./content/kyle-johnson-E3zv-4Rdz-Q-unsplash.jpg" alt="Image 1" onclick="openModal('./content/kyle-johnson-E3zv-4Rdz-Q-unsplash.jpg')">
+          </div>
+          <div class="gallery-item">
+            <img src="./content/leif-christoph-gottwald-KhTIw-dLWY4-unsplash.jpg" alt="Image 2" onclick="openModal('./content/leif-christoph-gottwald-KhTIw-dLWY4-unsplash.jpg')">
+          </div>
+          <div class="gallery-item">
+            <img src="./content/marek-piwnicki-WXx-J0J4Lzo-unsplash.jpg" alt="Image 3" onclick="openModal('./content/marek-piwnicki-WXx-J0J4Lzo-unsplash.jpg')">
+          </div>
+      </div>
+      
+      <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="Modal Image">
+      </div>
+</body>
+</html>

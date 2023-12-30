@@ -63,6 +63,9 @@ body{
 .header li a:hover::after{
     width: 100%;
 }
+#logo-header:hover::after{
+    width: 0%;
+}
 .logo_image img{
     height: 80px;
     width: auto;
@@ -366,8 +369,8 @@ body{
 }
 .title:visited {color:#000;}
 .title:hover {color:#324ab2;}
+.title{color: #000;}
 .title{
-    /* word-spacing: 1rem; */
     text-align: justify;
     text-decoration: none;
     justify-content: center;

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css"><link rel="shortcut icon" href="../content/ehsanelderly_LOGO-transparent.ico" type="image/x-icon">
+    <title>ثبت نام</title>
+</head>
+<body>
+    <div class="backbox"></div>
+    <div class="container">
+        <div class="content">
+            <div class="title">
+                <h2>ثبت نام</h2>
+            </div>
+            <div class="form">
+                <form action="">
+                    <div class="input1">
+                        <label for="name">نام</label>
+                        <input id="name" name="name" type="text" placeholder="نام" autofocus required>
+                    </div>
+                    <div class="input2">
+                        <label for="last_name">نام خانوادگی</label>
+                        <input id="last_name" name="last_name" type="text" placeholder="نام خانوادگی" required>
+                    </div>
+                    <div class="input3">
+                        <label for="phone-number">شماره موبایل</label>
+                        <input id="phone-number" name="phone-number" type="tel" 
+                        pattern="[0]{1}[9]{1}[0-9]{2}[0-9]{3}[0-9]{4}" 
+                        placeholder="شماره موبایل"
+                        required                         
+                        >
+                    </div>
+                    <div class="input4">
+                        <label for="password">رمز عبور</label>
+                        <input id="password" name="password" type="password"
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!,@,$,%]).{6,}$"
+                        required 
+                        minlength="6"
+                        placeholder="رمز عبور"                        
+                        >
+                        <input id="password-confirm" name="password-confirm" type="password"
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!,@,$,%]).{6,}$"
+                        required 
+                        minlength="6" 
+                        placeholder="تایید رمز عبور"                        
+                        >
+                    </div>
+                    <div class="submit">
+                        <button type="submit">تایید</button>
+                    </div>
+                </form>
+            </div> 
+        </div>
+        <div class="logo">
+            <a href="../index.html"><img src="../content/ehsanelderly_LOGO-transparent.png" alt="Logo Image" class="logo-img"></a>
+        </div>
+    </div>
+</body>
+</html>
