@@ -7,7 +7,7 @@ window.onload = function () {
     });
     function updateScreenSize() {
         const screenWidth = window.innerWidth;       
-        if (screenWidth > 1000) {
+        if (screenWidth > 850) {
             const menu_btn = document.querySelector('.hamburger');
             const element = document.querySelector('.mobile-nav');
             menu_btn.classList.remove('is-active')

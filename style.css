@@ -125,7 +125,7 @@ body{
     outline: none;
     border: none;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 850px) {
     .header{
         display: none;
     }
@@ -133,7 +133,7 @@ body{
         height: 4em;
     }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 850px) {
     .hamburger {
         display: none;
     }

@@ -124,23 +124,32 @@ body{
   outline: none;
   border: none;
 }
-@media screen and (max-width: 1000px) {
-  .header{
-      display: none;
-  }
+@media screen and (max-width: 850px) {
+
   .main_header{
-      height: 4em;
+    height: 4em;
   }
   .login_signup{
     font-size: 1rem;
   }
   .header li{
-      font-size: 1.1rem;
+    font-size: 1.1rem;
+  }
+  .header{
+    display: none;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 1000px) {
+  .login_signup{
+    font-size: 1rem;
+  }
+  .header li{
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 850px) {
   .hamburger {
-      display: none;
+    display: none;
   }
 }
 .hamburger .bar , .hamburger:after , .hamburger:before{
