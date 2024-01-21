@@ -33,16 +33,40 @@
                     <img src="../content/account-plus.svg" alt="add-user">
                 </div>
                 <div class="user_list">
-                    <div class="user_list_title">
+                    <div class="user_list_title isnt_active">
                         <div><span>نام کاربری</span></div>
                         <div><span>رمز عبور</span></div>
                     </div>
                     <!-- For Iteration on User List -->
-                    <div class="user_list_detail">
+                    <div class="user_list_detail isnt_active">
                         <div><span>username</span></div>
                         <div><span>password</span></div>
                     </div>
-                    <div class="seprator"></div>
+                    <div class="seprator isnt_active"></div>
+                    <!-- End of Loop -->
+                    <form action="">
+                        <div class="add_user">
+                            <div class="add_user_title"><p>افزودن کاربر</p></div>
+                            <div class="add_user_input">
+                                <label for="newusername">نام کاربری</label>
+                                <input id="newusername" name="newusername" type="tel" 
+                                pattern="[0]{1}[9]{1}[0-9]{2}[0-9]{3}[0-9]{4}" 
+                                placeholder="شماره موبایل"
+                                required                         
+                                >
+                                <label for="newpassword">رمز عبور</label>
+                                <input id="newpassword" name="newpassword" type="password"
+                                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!,@,$,%]).{6,}$"
+                                required 
+                                minlength="6" 
+                                placeholder="رمز عبور"                        
+                                >
+                            </div>
+                            <div class="newuser_btn">
+                                <button type="submit">ثبت</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

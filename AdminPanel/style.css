@@ -9,7 +9,6 @@
 }
 body{
     background-color: #F5F0DF;
-    /* background-color: brown; */
     font-family: Shabnam-FD;
 }
 .header{
@@ -129,4 +128,57 @@ body{
     width: 80%;
     background-color: #fff;
     margin-bottom: 15px;
+}
+.isnt_active{
+    display: none;
+}
+
+.add_user_title{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 1.2em;
+}
+.add_user_input label{
+display: block;
+color: #fff;
+font-size: 1.4rem;
+margin-bottom: 5px;
+}
+.add_user_input input{
+    width: 350px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 5em;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: Shabnam-FD;
+}
+.add_user_input input:focus{
+    outline: 2px solid #ccc;
+    box-shadow:0 0 15px #7B1111;
+}
+.add_user_input input:focus:invalid{
+    outline: 2px solid rgba(255, 0, 0, 0.806);
+}
+.add_user_input input::placeholder{
+    text-align: center;
+    font-size: 1rem;
+}
+.newuser_btn button{
+    margin: 1em;
+    margin-right: 3.5em;
+    padding-right: 8px;
+    width: 200px;
+    height: 60px;
+    border: none;
+    background-color: #7B1111;
+    color: #fff;
+    font-size: 1.7rem;
+    font-family: Shabnam-FD;
+    font-weight: 800;
+    border-radius: 5em;
+    text-align: center;
 }
