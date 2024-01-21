@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>پنل ادمین</title>
+    <link rel="shortcut icon" href="../content/admin-outlined-white2.ico" type="image/x-icon">
+    <title>Admin Panel</title>
 </head>
 <body>
     <header>
@@ -13,5 +14,37 @@
             <img src="../content/admin-outlined-white.svg" alt="admin_svg" class="admin_img">
         </div>
     </header>
+    <main>
+        <div class="container">
+
+            <div class="side_btn">
+                <div class="users_btn">
+                    <img src="../content/account-circle-white.svg" alt="user_svg">
+                    <span>کاربران</span>
+                </div>
+                <div class="addphoto_btn">
+                    <img src="../content/add-photo-alternate-white.svg" alt="photo_svg">
+                    <span>افزودن عکس به گالری</span>
+                </div>
+            </div>
+            <div class="centerbox">
+                <div class="add_remove_btn">
+                    <img src="../content/account-minus.svg" alt="remove-user">
+                    <img src="../content/account-plus.svg" alt="add-user">
+                </div>
+                <div class="user_list">
+                    <div class="user_list_title">
+                        <div><span>نام کاربری</span></div>
+                        <div><span>رمز عبور</span></div>
+                    </div>
+                    <!-- For Iteration on User List -->
+                    <div class="user_list_detail">
+                        <div><span>username</span></div>
+                        <div><span>password</span></div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
