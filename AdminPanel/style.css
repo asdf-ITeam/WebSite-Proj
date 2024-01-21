@@ -3,3 +3,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face{
+    font-family: "Shabnam-FD";
+    src: url(../fonts/Shabnam-FD.woff2) format("woff2");
+}
+body{
+    background-color: #F5F0DF ;
+    font-family: Shabnam-FD;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 10px auto;
+    padding: .5em 0;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: bolder;
+    background-color:#BF360C;
+    color:#fff;
+    border-radius: .5em;
+}
+.admin_img{
+    width:80px;
+}
