@@ -45,7 +45,7 @@
                     <div class="seprator isnt_active"></div>
                     <!-- End of Loop -->
                     <form action="">
-                        <div class="add_user">
+                        <div class="add_user isnt_active">
                             <div class="add_user_title"><p>افزودن کاربر</p></div>
                             <div class="add_user_input">
                                 <label for="newusername">نام کاربری</label>
@@ -64,6 +64,22 @@
                             </div>
                             <div class="newuser_btn">
                                 <button type="submit">ثبت</button>
+                            </div>
+                        </div>
+                    </form>
+                    <form action="">
+                        <div class="remove_user">
+                            <div class="add_user_title"><p>حذف کاربر</p></div>
+                            <div class="add_user_input">
+                                <label for="username">نام کاربری</label>
+                                <input id="username" name="username" type="tel" 
+                                pattern="[0]{1}[9]{1}[0-9]{2}[0-9]{3}[0-9]{4}" 
+                                placeholder="شماره موبایل"
+                                required                         
+                                >
+                            </div>
+                            <div class="removeuser_btn">
+                                <button type="submit">تایید</button>
                             </div>
                         </div>
                     </form>
