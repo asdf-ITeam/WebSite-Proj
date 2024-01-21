@@ -129,10 +129,6 @@ body{
     background-color: #fff;
     margin-bottom: 15px;
 }
-.isnt_active{
-    display: none;
-}
-
 .add_user_title{
     text-align: center;
     font-size: 1.8rem;
@@ -197,4 +193,7 @@ margin-bottom: 5px;
     font-weight: 800;
     border-radius: 5em;
     text-align: center;
+}
+.isnt_active{
+    display: none;
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="../content/admin-outlined-white2.ico" type="image/x-icon">
+    <script src="script.js"></script>
     <title>Admin Panel</title>
 </head>
 <body>
@@ -29,8 +30,8 @@
             </div>
             <div class="centerbox">
                 <div class="add_remove_btn">
-                    <img src="../content/account-minus.svg" alt="remove-user">
-                    <img src="../content/account-plus.svg" alt="add-user">
+                    <img src="../content/account-minus.svg"class="user_minus" alt="remove-user">
+                    <img src="../content/account-plus.svg" class="user_plus" alt="add-user">
                 </div>
                 <div class="user_list">
                     <div class="user_list_title isnt_active">
@@ -42,7 +43,7 @@
                         <div><span>username</span></div>
                         <div><span>password</span></div>
                     </div>
-                    <div class="seprator isnt_active"></div>
+                    <div class="seprator isnt_active" ></div>
                     <!-- End of Loop -->
                     <form action="">
                         <div class="add_user isnt_active">
@@ -68,7 +69,7 @@
                         </div>
                     </form>
                     <form action="">
-                        <div class="remove_user">
+                        <div class="remove_user isnt_active">
                             <div class="add_user_title"><p>حذف کاربر</p></div>
                             <div class="add_user_input">
                                 <label for="username">نام کاربری</label>
