@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: "Shabnam-FD";
+    src: url("/static/Shabnam-FD.woff2" ) format("woff2");
+}
+body{
+    background-color: #F5F0DF;
+    font-family: Shabnam-FD;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    margin: 10px auto;
+    padding: .5em 0;
+    font-size: 2.7rem;
+    font-style: italic;
+    font-weight: bold;
+    background-color:#BF360C;
+    color:#fff;
+    border-radius: .5em;
+}
+.container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 2em;
+}
+.admin_img{
+    width:80px;
+}
+.side_btn{
+    background-color: #FFFEE8;
+    width: 350px;
+    padding: 15px 0;
+    margin-right: 50px;
+    border-radius: 1em;
+}
+.users_btn , .addphoto_btn{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #F46432;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 10px;
+    padding: 20px 20px;
+    border-radius: 1em;
+}
+.users_btn:hover , .addphoto_btn :hover{
+    cursor: pointer;
+}
+.users_btn{
+    margin-bottom: 20px;
+}
+.users_btn span {
+    padding-right: 70px;
+}
+.users_btn img , .addphoto_btn img{
+    width: 50px;
+}
+.centerbox{
+    background-color: #FFFEE8;
+    width: 65%;
+    height: 35rem;
+    border-radius: 50px 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+.add_remove_btn{
+    background-color: #F5F0DF;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5em;
+}
+.add_remove_btn :first-child{
+    margin-left: 15px;
+}
+.add_remove_btn img{
+    width: 50px;
+}
+.add_remove_btn img:hover{
+    cursor: pointer;
+}
+.user_list{
+    background-color: #F46432;
+    width: 90%;
+    height: 400px;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+}
+.user_list_title{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    width: 90%;
+    gap: 15em;
+    padding-bottom: 10px;
+    margin-bottom: 1em;
+    border-bottom: 0.2em dashed black;
+    border-width: 3.5px;    
+}
+.user_list_detail{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: #fff;
+    width: 100%;
+    gap: 16em;
+    margin-bottom: 1em;
+}
+.seprator{
+    height: .2em;
+    width: 80%;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+.add_user_title{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 1.2em;
+}
+.add_user_input label{
+display: block;
+color: #fff;
+font-size: 1.4rem;
+margin-bottom: 5px;
+}
+.add_user_input input{
+    width: 350px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 5em;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: Shabnam-FD;
+}
+.add_user_input input:focus{
+    outline: 2px solid #ccc;
+    box-shadow:0 0 15px #7B1111;
+}
+.add_user_input input:focus:invalid{
+    outline: 2px solid rgba(255, 0, 0, 0.806);
+}
+.add_user_input input::placeholder{
+    text-align: center;
+    font-size: 1rem;
+}
+.newuser_btn button{
+    margin: 1em;
+    margin-right: 3.5em;
+    padding-right: 8px;
+    width: 200px;
+    height: 60px;
+    border: none;
+    background-color: #7B1111;
+    color: #fff;
+    font-size: 1.7rem;
+    font-family: Shabnam-FD;
+    font-weight: 800;
+    border-radius: 5em;
+    text-align: center;
+}
+.removeuser_btn button{
+    margin: 1em;
+    margin-top: 2em;
+    margin-right: 3.5em;
+    padding-right: 8px;
+    width: 200px;
+    height: 60px;
+    border: none;
+    background-color: #7B1111;
+    color: #fff;
+    font-size: 1.7rem;
+    font-family: Shabnam-FD;
+    font-weight: 800;
+    border-radius: 5em;
+    text-align: center;
+}
+.isnt_active{
+    display: none;
+}

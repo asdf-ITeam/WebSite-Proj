@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/login.css') }}">
+    <link rel="shortcut icon" href="/static/images/ehsanelderly_LOGO-transparent.ico" type="image/x-icon">
+    <title>ورود</title>
+</head>
+<body>
+    <div class="container">
+        <div class="backimg"><img src="/static/images/ehsanelderly_Half-LOGO - Copy.png" alt=""></div>
+        <div class="login-form">
+            <div class="title">
+                <h2>ورود</h2>
+            </div>
+            <form method="POST" action="">
+                <div class="form">
+                    <div class="input1">
+                        <label for="phone-number">شماره موبایل</label>
+                        <input id="phone-number" name="phone-number" type="tel" 
+                            placeholder="شماره موبایل" autofocus>
+                    </div>
+                    <div class="input2">
+                        <label for="password">رمز عبور</label>
+                        <input id="password" name="password" type="password"
+                            placeholder="رمز عبور">
+                    </div>
+                    <div class="submit">
+                        <button type="submit">تایید</button>
+                    </div>
+                </div>
+            </form>
+            <div class="link-signup">
+                <span class="section1">حساب کاربری ندارید؟ <a href="/signup">ثبت نام</a></span>
+            </div>                
+        </div>
+    </div>
+</body>
+</html>

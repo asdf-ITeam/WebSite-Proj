@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/AdminPanel.css') }}">
+    <link rel="shortcut icon" href="/static/images/admin-outlined-white2.ico" type="image/x-icon">
+    <script src="/static/styles/AdminPanel.js"></script>
+    <title>Admin Panel</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <span class="title">به پنل ادمین خوش آمدید!</span>
+            <img src="/static/images/admin-outlined-white.svg" alt="admin_svg" class="admin_img">
+        </div>
+    </header>
+    <main>
+        <div class="container">
+
+            <div class="side_btn">
+                <div class="users_btn">
+                    <img src="/static/images/account-circle-white.svg" alt="user_svg">
+                    <span>کاربران</span>
+                </div>
+                <div class="addphoto_btn">
+                    <img src="/static/images/add-photo-alternate-white.svg" alt="photo_svg">
+                    <span>افزودن عکس به گالری</span>
+                </div>
+            </div>
+            <div class="centerbox">
+                <div class="add_remove_btn">
+                    <img src="/static/images/account-minus.svg"class="user_minus" alt="remove-user">
+                    <img src="/static/images/account-plus.svg" class="user_plus" alt="add-user">
+                </div>
+                <div class="user_list">
+                    <div class="user_list_title isnt_active">
+                        <div><span>نام کاربری</span></div>
+                        <div><span>رمز عبور</span></div>
+                    </div>
+
+                    {% for user in users %}
+                        <div class="user_list_detail isnt_active">
+                            <div><span>{{ user.phone_number }}</span></div>
+                            <div><span>{{ user.password }}</span></div>
+                        </div>
+                    {% endfor %}
+
+                    <form action="{{ url_for('views.add_user') }}" method="POST">
+                        <div class="add_user isnt_active">
+                            <div class="add_user_title"><p>افزودن کاربر</p></div>
+                            <div class="add_user_input">
+                                <label for="new_first_name">نام</label>
+                                <input id="new_first_name" name="new_first_name" type="text" required>
+                                <label for="new_last_name">نام خانوادگی</label>
+                                <input id="new_last_name" name="new_last_name" type="text" required>
+                                <label for="new_phone_number">شماره موبایل</label>
+                                <input id="new_phone_number" name="new_phone_number" type="tel" 
+                                    pattern="[0]{1}[9]{1}[0-9]{2}[0-9]{3}[0-9]{4}" 
+                                    placeholder="شماره موبایل"
+                                    required>
+                                <label for="new_password">رمز عبور</label>
+                                <input id="new_password" name="new_password" type="password"
+                                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!,@,$,%]).{6,}$"
+                                    required 
+                                    minlength="6" 
+                                    placeholder="رمز عبور">
+                            </div>
+                            <div class="newuser_btn">
+                                <button type="submit">ثبت</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <form action="{{ url_for('views.delete_user') }}" method="POST">
+                        <div class="remove_user isnt_active">
+                            <div class="add_user_title"><p>حذف کاربر</p></div>
+                            <div class="add_user_input">
+                                <label for="phone_number">شماره موبایل</label>
+                                <input id="phone_number" name="phone_number" type="tel" 
+                                    pattern="[0]{1}[9]{1}[0-9]{2}[0-9]{3}[0-9]{4}" 
+                                    placeholder="شماره موبایل"
+                                    required>
+                            </div>
+                            <div class="removeuser_btn">
+                                <button type="submit">تایید</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

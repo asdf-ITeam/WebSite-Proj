@@ -1,0 +1,185 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face{
+        font-family: "Shabnam-FD";
+    src: url("/static/Shabnam-FD.woff2" ) format("woff2");
+}
+body{
+    background-color: #F5F0DF ;
+    font-family: Shabnam-FD;
+}
+.flash-messages {
+    margin-bottom: 20px;
+}
+
+.flash-message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    word-wrap: break-word;
+}
+
+.success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+.flash-message button {
+    float: left;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.container{
+    margin: auto;
+    margin-top: 5%;
+}
+.backimg{
+
+    display: flex;
+    justify-content: center;
+    min-width: 320px;
+    width: 100%;
+    /* max-width: 370px; */
+}
+.backimg img{
+    min-width: 320px;
+    max-width: 370px;
+    width: 24%;
+}
+.login-form{
+    box-sizing: border-box;
+    background-color: #F46432;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 24%;
+    /* height: 25em; */
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 370px;
+    border-radius: 0 0 15% 15%;
+    /* padding-bottom: 100px; */
+    padding-right: 35px;
+    padding-left: 35px;
+    
+    
+}
+.form{
+    /* display: flex;
+    flex-direction: column;
+    gap: 1em; */
+    min-width: 260px;
+    margin-top: 0;
+}
+.title{
+    margin-bottom: .8em;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+.input1 label, .input2 label{
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 1.1rem;
+}
+.input1 ,.input2, .link-signup{
+    margin-bottom: 20px;
+}
+.input1 input:focus,.input2 input:focus{
+    outline: 2px solid #ccc;
+    box-shadow:0 0 15px #7B1111;
+}
+.input1 input:focus:invalid,.input2 input:focus:invalid {
+    outline: 2px solid rgba(255, 0, 0, 0.806);
+}
+.input1 input::placeholder,.input2 input::placeholder{
+    text-align: center;
+    font-family: Shabnam-FD;
+    font-size: .9rem;
+}
+.input1 input , .input2 input{
+    font-family: Shabnam-FD;
+    font-size: 1.1rem;
+    direction: ltr;
+    
+    /* Set the width and height */
+    width: 90%;
+    height: 45px;
+    text-align: center;
+    margin: auto;
+
+    /* Add padding and border */
+    /* padding: 5px; */
+    border: 1px solid #ccc;
+    
+    /* Customize the font */
+    /* font-family: Arial, sans-serif;
+    font-size: 14px; */
+    
+    /* Add some space between the text and the border */
+    /* margin: 5px; */
+    
+    /* Add a background color */
+    background-color: #fff;
+    
+    /* Add some rounded corners */
+    border-radius: 2em;
+    
+    /* Add hover and focus effects */
+  }
+.submit button{
+    box-sizing: border-box;
+    width: 90%;
+    height: 2.5em;
+    font-family: Shabnam-FD;
+    font-size: 1.6rem;
+    border: none;
+    color: #fff;
+    background: #7B1111;
+    border-radius: 51em;
+    display: block;
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+    cursor: pointer;
+}
+.link-signup{
+    color: #fff;
+}
+
+.link-signup a{
+    text-decoration: none;
+    color: #7B1111;
+    font-size: 1rem;
+}
+.link-signup .section1{
+    font-size: .8rem;
+}
+.vector{
+    /* min-width: 320px; */
+    /* width: 300px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img{
+        width: 265px;
+        /* min-width: 300px;
+        max-width: 320px; */
+    }
+}
