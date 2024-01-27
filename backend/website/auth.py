@@ -15,15 +15,13 @@ def login():
         user = User.query.filter_by(phone_number=phoneNumber).first()
         if user and check_password_hash(user.password, password):
             login_user(user, remember=True)
-            flash("Logged in successfully", category="success")
+            flash("ورود با موفقیت انجام شد", category="success")
             # Redirect to the home page or another appropriate page after login
             return redirect(url_for('views.home'))
         else:
-            flash("Login unsuccessful. Check phone number and password.", category="error")
+            flash("ورود ناموفق. شماره تلفن یا رمز عبور را بررسی کنید.", category="error")
 
-    return render_template("login.html",user=current_user)
-
-
+    return render_template("login.html", user=current_user)
 
 
 @auth.route("/signup", methods=['GET', 'POST'])
@@ -37,13 +35,13 @@ def sign_up():
 
         existing_user = User.query.filter_by(phone_number=phoneNumber).first()
         if existing_user:
-            flash('Phone number already exists.', category='error')
+            flash('شماره تلفن از قبل وجود دارد.', category='error')
         elif len(firstName) < 2:
-            flash('First name must be greater than 1 character.', category='error')
+            flash('نام باید بیشتر از یک حرف باشد.', category='error')
         elif len(lastName) < 2:
-            flash('Last name must be greater than 1 character.', category='error')
+            flash('نام خانوادگی باید بیشتر از یک حرف باشد.', category='error')
         elif password != passwordConfirm or len(password) < 6:
-            flash('Passwords must match and be at least 6 characters.', category='error')
+            flash('رمز عبور باید حداقل ۶ حرف باشد و با تایید آن مطابقت داشته باشد.', category='error')
         else:
             new_user = User(
                 first_name=firstName,
@@ -56,15 +54,14 @@ def sign_up():
             db.session.commit()
             login_user(new_user, remember=True)
 
-            flash('Account created', category='success')
+            flash('حساب کاربری ایجاد شد', category='success')
             return redirect(url_for("views.home"))
 
-    return render_template("signup.html",user=current_user)
+    return render_template("signup.html", user=current_user)
 
 @auth.route("/logout")
 @login_required
 def logout():
     logout_user()
-    flash('Logged out successfully', category='success')
-    # Redirect to the home page or another appropriate page after logout
+    flash('با موفقیت خارج شدید', category='success')
     return redirect(url_for('views.home'))

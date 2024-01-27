@@ -1,0 +1,33 @@
+/* flash-messages.css */
+
+/* Styles for flash messages */
+.flash-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 300px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    color: #333;
+    z-index: 9999;
+    animation: fadeInOut 0.5s ease-in-out;
+}
+
+.flash-message.success {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.flash-message.error {
+    background-color: #FF5733;
+    color: #fff;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(20px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-20px); }
+}

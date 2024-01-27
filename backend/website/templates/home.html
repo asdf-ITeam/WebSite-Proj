@@ -3,14 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static',filename='styles/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/flash-messages.css') }}">
     <link rel="shortcut icon" href="/static/images/ehsanelderly_LOGO-transparent.ico" type="image/x-icon">
     <script src="/static/styles/Ham.js"></script>
+    <script src="{{ url_for('static', filename='styles/flash-messages.js') }}"></script>
     <title>مرکز روزانه سالمندان احسان</title>
 </head>
 <body>
+    <header>   
 
-    <header>        
+        <div id="flash-messages-container">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+     
         <div class="main_header">
             <button class="hamburger">
                 <div class="bar"></div>
@@ -23,7 +35,11 @@
                         <li class="gallery_nav"><a href="/gallery">گالری عکس</a></li>
                         <li class="article_nav"><a href="/article">مقالات</a></li>
                         <li class="about_nav"><a href="#">درباره ما</a></li>
-                        <li class="contact_nav"><a href="#">تماس با ما</a></li>
+                        {%if user.is_authenticated and user.first_name=="admin"%}
+                        <li class="contact_nav"><a href="/admin">admin panel</a></li>
+                        {%else%}
+                        <li class="contact_nav"><a href="/contact">تماس با ما</a></li>
+                        {%endif%}
                     </ul>
                 </div>
             </nav>
@@ -32,7 +48,7 @@
                 <div class="loginbtn"><a href="/login">ورود</a></div>
                 <div class="signupbtn"><a href="/signup">ثبت نام</a></div>
                 {%else%}
-                <div class="loginbtn"><a href="/login">خوش اومدی {{ user.first_name }}</a></div>
+                <div class="loginbtn"><a href="#">خوش اومدی {{ user.first_name }}</a></div>
                 <div class="signupbtn"><a href="/logout">خروج</a></div>
 
                 {%endif%}
@@ -43,7 +59,7 @@
                 <a href="/gallery">گالری عکس</a>
                 <a href="/article">مقالات</a>
                 <a href="#">درباره ما</a>
-                <a href="#">تماس با ما</a>
+                <a href="/contact">تماس با ما</a>
             </nav>
         </div>
     </header>
@@ -55,12 +71,30 @@
             </div>
             <div class="activity_title"><span>فعالیت ها</span></div>
             <div class="activities">
-                <div class="activitybox"><span>box title</span></div>
-                <div class="activitybox"><span>box title</span></div>
-                <div class="activitybox"><span>box title</span></div>
-                <div class="activitybox"><span>box title</span></div>
-                <div class="activitybox"><span>box title</span></div>
-                <div class="activitybox"><span>box title</span></div>
+                <div class="activitybox">
+                    <span class="activitybox_title">سلامت</span>
+                    <p class="activitybox_description">دکترهای متخصص برای مراقبت از سلامت عزیزان شما</p>
+                </div>
+                <div class="activitybox">
+                    <span class="activitybox_title">ورزش</span>
+                    <p class="activitybox_description">ورزش عنصر کلیدی تحرک است. ما به تحرک عزیزانتان اهمیت میدهیم</p>
+                </div>
+                <div class="activitybox">
+                    <span class="activitybox_title">بازی های ذهنی</span>
+                    <p class="activitybox_description">انجام این بازی ها باعث جلوگیری از پیشرفت آلزایمر میشود</p>
+                </div>
+                <div class="activitybox">
+                    <span class="activitybox_title">توان بخشی</span>
+                    <p class="activitybox_description">متخصصان فیزیوتراپ برای درمان و بهبود عزیزانتان</p>
+                </div>
+                <div class="activitybox">
+                    <span class="activitybox_title">هنر درمانی</span>
+                    <p class="activitybox_description">انجام فعالیت هایی مانند نقاشی، شعر خوانی تاثیر زیادی در روحیه سالمندان دارد</p>
+                </div>
+                <div class="activitybox">
+                    <span class="activitybox_title">گردش</span>
+                    <p class="activitybox_description">داشتن گردش های درون شهری برای تنوع و بازدید یکسری اماکن گردشگری</p>
+                </div>
             </div>
             <div class="minigall_title"><div class="title_box"><a href="/gallery">گالری</a></div></div>
             <div class="mini_gallery">

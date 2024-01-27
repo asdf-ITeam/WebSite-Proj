@@ -46,7 +46,7 @@
                         </div>
                     {% endfor %}
 
-                    <form action="{{ url_for('views.add_user') }}" method="POST">
+                    <form action="{{ url_for('views.home') }}" method="POST">
                         <div class="add_user isnt_active">
                             <div class="add_user_title"><p>افزودن کاربر</p></div>
                             <div class="add_user_input">
@@ -72,7 +72,7 @@
                         </div>
                     </form>
 
-                    <form action="{{ url_for('views.delete_user') }}" method="POST">
+                    <form action="{{ url_for('views.home') }}" method="POST">
                         <div class="remove_user isnt_active">
                             <div class="add_user_title"><p>حذف کاربر</p></div>
                             <div class="add_user_input">

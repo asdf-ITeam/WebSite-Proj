@@ -1,7 +1,7 @@
 #endpoints
 #flask --app main --debug run
 from flask import Blueprint,render_template
-from flask_login import  login_required, current_user
+from flask_login import current_user
 
 
 views=Blueprint('views',__name__)
@@ -18,7 +18,10 @@ def article():
 def gallery():
     return render_template("gallery.html")
 
-"""@views.route("/admin")
-def admin():
+@views.route("/adminn")
+def adminn():
     return render_template("AdminPanel.html")
-"""
+
+@views.route("/contact")
+def contact():
+    return render_template("contact.html")

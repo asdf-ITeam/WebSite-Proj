@@ -10,36 +10,6 @@ body{
     background-color: #F5F0DF ;
     font-family: Shabnam-FD;
 }
-.flash-messages {
-    margin-bottom: 20px;
-}
-
-.flash-message {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    word-wrap: break-word;
-}
-
-.success {
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-    color: #155724;
-}
-
-.error {
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-    color: #721c24;
-}
-
-.flash-message button {
-    float: left;
-    background-color: transparent;
-    border: none;
-    color: inherit;
-    cursor: pointer;
-}
 .main_header{
     background-color: #F46432;
     display: flex;
@@ -252,7 +222,7 @@ body{
 .activity_title{
     text-align: center;
     width: 100%;
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 .activities{
@@ -267,14 +237,30 @@ body{
     
 }
 .activitybox{
-    display: flex;
+    box-sizing: border-box;
     background-color: #F46432;
     min-width: 30%;
     max-width: 300px;
     height: 370px;
     border-radius: 60px;
-    box-shadow: 16px 16px #7D4430 ;
-    justify-content: center;
+    box-shadow: 16px 16px #7D4430;
+    padding: 10px 5%;
+}
+.activitybox_title{
+    color:#fff;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-bottom: .5em;
+    margin-top: 1em;
+}
+.activitybox_description{
+    color: #ECEFF1;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 1.3rem;
+    max-width: 90%;
 }
 @media screen and (max-width: 1400px){
     .activitybox{
